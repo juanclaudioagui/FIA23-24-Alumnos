@@ -12,9 +12,11 @@ class Environment():
         raise NotImplementedError()
     
     def getEnvironment(self):
+        # get percept from environment
         raise NotImplementedError()
 
     def setEnvironment(self):
+        # change some aspect of the environment
         raise NotImplementedError()
     
 
@@ -26,20 +28,20 @@ class ReflexAgent():
         raise NotImplementedError()
 
     def selectAction(percept):
-        """ obtains percepts from the environment using available sensors """
+        # selects action based on percept and condition-action rules
         raise NotImplementedError()
 
     def execAction(self, action, environment):
-        """ excecutes selectd action, updatintg its state and the environment as appropriate """
+        # excecutes selected action, updating its state and the environment state
         raise NotImplementedError()
         
     def preceptAndAct(self,environment):
-        """ Basic Reflex cycle """
+        # one step of interaction with the environment
         
-        # uses sensor to ask the environment
+        # uses sensor to perceive the environment
         percept = environment.getEnvironment()   
 
-        # selects proper action based on internal logic, state,  and percept
+        # selects action
         action  = self.selectAction(percept)     
         
         # applies selected action
